@@ -1,5 +1,6 @@
 package com.example.vaccinationpassport;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -21,6 +22,7 @@ public class PassportActivity extends AppCompatActivity {
     private TextView lastNameTextView;
     private TextView dobTextView;
     private TextView healthCareNumberTextView;
+    private TextView verifiedTextView;
     private Button verifyButton;
 
 
@@ -45,13 +47,25 @@ public class PassportActivity extends AppCompatActivity {
         dobTextView.setText(getIntent().getStringExtra("dob"));
         healthCareNumberTextView = (TextView) findViewById(R.id.health_care_number_value);
         healthCareNumberTextView.setText(getIntent().getStringExtra("healthCareNumber"));
+        verifiedTextView = (TextView) findViewById(R.id.verified_value);
+        verifiedTextView.setText(getIntent().getStringExtra("verified"));
     }
 
     private View.OnClickListener onCreateVerify = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent newIntent = new Intent(getApplicationContext(), VerifyActivity.class);
-            startActivity(newIntent);
+            startActivityForResult(newIntent, 1);
         }
     };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            verifiedTextView.setText("VERIFIED");
+        } else {
+            verifiedTextView.setText("UNVERIFIED");
+        }
+    }
 }

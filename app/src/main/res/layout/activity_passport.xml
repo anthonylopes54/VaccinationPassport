@@ -280,4 +280,17 @@
             android:layout_height="match_parent" />
     </TableLayout>
 
+    <TextView
+        android:id="@+id/verified_value"
+        android:layout_width="152dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="688dp"
+        android:layout_marginEnd="249dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
