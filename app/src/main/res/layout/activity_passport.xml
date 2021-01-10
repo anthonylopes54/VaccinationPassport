@@ -75,9 +75,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:padding="5dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/row1_heading"
@@ -89,19 +87,19 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/row2col2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/row2col3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/row2col4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp" />
@@ -121,19 +119,19 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/row3col2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:padding="5dp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/row3col3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/row3col4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp" />
@@ -271,13 +269,6 @@
                 android:padding="5dp" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </TableLayout>
 
     <TextView
@@ -292,5 +283,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/verifyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
