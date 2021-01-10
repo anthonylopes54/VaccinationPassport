@@ -1,5 +1,6 @@
 package com.example.vaccinationpassport;
 
+import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.nfc.NdefMessage;
@@ -132,8 +133,16 @@ public class VerifyActivity extends AppCompatActivity {
             // USE THIS AS WHATEVER YOU NEED FOR VERIFICATION
             // ie you could go to a different 'verified' page here
             msg = "Password correct!";
+            Intent newIntent = new Intent(getApplicationContext(), PassportActivity.class);
+            newIntent.putExtra("verified", "VERIFIED");
+            setResult(Activity.RESULT_OK, newIntent);
+            onBackPressed();
         } else {
             msg = "incorrect password";
+            Intent newIntent = new Intent(getApplicationContext(), PassportActivity.class);
+            newIntent.putExtra("verified", "UNVERIFIED");
+            setResult(Activity.RESULT_CANCELED, newIntent);
+            onBackPressed();
         }
 
         text.setText(msg);

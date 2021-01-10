@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             newIntent.putExtra("lastName", lastName.getText().toString());
             newIntent.putExtra("dob", dateOfBirth.getText().toString());
             newIntent.putExtra("healthCareNumber", healthCareNumber.getText().toString());
+            newIntent.putExtra("verified", "UNVERIFIED");
             startActivity(newIntent);
         }
     };
