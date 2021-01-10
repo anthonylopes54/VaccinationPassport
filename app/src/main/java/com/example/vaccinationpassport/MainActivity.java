@@ -58,14 +58,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent newIntent = new Intent(getApplicationContext(), PassportActivity.class);
-            Bundle userInfo = new Bundle();
-            userInfo.putString("firstName", firstName.getText().toString());
-            userInfo.putString("lastName", lastName.getText().toString());
-            userInfo.putString("dob", dateOfBirth.getText().toString());
             Bitmap profilePic = ((BitmapDrawable)imageView.getDrawable()).getBitmap();
             ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
             profilePic.compress(Bitmap.CompressFormat.PNG, 100, byteStream);
             newIntent.putExtra("byteArray", byteStream.toByteArray());
+            newIntent.putExtra("firstName", firstName.getText().toString());
+            newIntent.putExtra("lastName", lastName.getText().toString());
+            newIntent.putExtra("dob", dateOfBirth.getText().toString());
             startActivity(newIntent);
         }
     };
