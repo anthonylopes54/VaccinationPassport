@@ -14,6 +14,7 @@ public class PassportActivity extends AppCompatActivity {
     private TextView firstNameTextView;
     private TextView lastNameTextView;
     private TextView dobTextView;
+    private TextView healthCareNumberTextView;
 
 
     @Override
@@ -33,6 +34,8 @@ public class PassportActivity extends AppCompatActivity {
         lastNameTextView.setText(getIntent().getStringExtra("lastName"));
         dobTextView = (TextView) findViewById(R.id.dob_value);
         dobTextView.setText(getIntent().getStringExtra("dob"));
+        healthCareNumberTextView = (TextView) findViewById(R.id.health_care_number_value);
+        healthCareNumberTextView.setText(getIntent().getStringExtra("healthCareNumber"));
 
 
     }

@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText firstName;
     private TextInputEditText lastName;
     private EditText dateOfBirth;
+    private EditText healthCareNumber;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         firstName = findViewById(R.id.firstName);
         lastName = findViewById(R.id.lastName);
         dateOfBirth = findViewById(R.id.editTextDate);
+        healthCareNumber = findViewById(R.id.healthCareNumber);
         imageView.setOnClickListener(onUploadPhotoClick);
         createPassportButton.setOnClickListener(onCreatePassport);
     }
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             newIntent.putExtra("firstName", firstName.getText().toString());
             newIntent.putExtra("lastName", lastName.getText().toString());
             newIntent.putExtra("dob", dateOfBirth.getText().toString());
+            newIntent.putExtra("healthCareNumber", healthCareNumber.getText().toString());
             startActivity(newIntent);
         }
     };
