@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">vaccinationPassport</string>
-    <string name="title_activity_passport">COVID-19 Vaccination Record</string>
-    <string name="title_activity_verify">Verify</string>
+    <string name="app_name"></string>
+    <string name="title_activity_passport"></string>
+    <string name="title_activity_verify"></string>
 
     <!--
     This string is used for square devices and overridden by hello_world in
