@@ -23,6 +23,13 @@ public class PassportActivity extends AppCompatActivity {
     private TextView healthCareNumberTextView;
     private Button verifyButton;
 
+    private TextView row2col2TextView;
+    private TextView row2col3TextView;
+    private TextView row2col4TextView;
+    private TextView row3col2TextView;
+    private TextView row3col3TextView;
+    private TextView row3col4TextView;
+    private TextView doneTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +58,26 @@ public class PassportActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent newIntent = new Intent(getApplicationContext(), VerifyActivity.class);
+
+            row2col2TextView = (TextView) findViewById(R.id.row2col2);
+            row2col3TextView = (TextView) findViewById(R.id.row2col3);
+            row2col4TextView = (TextView) findViewById(R.id.row2col4);
+            row3col2TextView = (TextView) findViewById(R.id.row3col2);
+            row3col3TextView = (TextView) findViewById(R.id.row3col3);
+            row3col4TextView = (TextView) findViewById(R.id.row3col4);
+            doneTextView = (TextView) findViewById(R.id.done);
+
+            if (row2col2TextView.getText().toString().equals("Pfizer")) {
+                row3col2TextView.setText("Pfizer");
+                row3col3TextView.setText("01/10/20");
+                row3col4TextView.setText("Fraser Health");
+                doneTextView.setText("COVID-19 Vaccination Complete");
+            }
+
+            row2col2TextView.setText("Pfizer");
+            row2col3TextView.setText("01/10/20");
+            row2col4TextView.setText("Fraser Health");
+
             startActivity(newIntent);
         }
     };
