@@ -120,7 +120,7 @@ public class VerifyActivity extends AppCompatActivity {
         List<ParsedNdefRecord> records = NdefMessageParser.parse(msgs[0]);
         final int size = records.size();
 
-        for (int i = 0; i < size; i++) {
+        for (int i = 1; i < size; i++) {
             ParsedNdefRecord record = records.get(i);
             String str = record.str();
             builder.append(str);
@@ -128,7 +128,9 @@ public class VerifyActivity extends AppCompatActivity {
 
         String password = builder.toString();
         String msg;
-        if (password.equals("password123")) {
+        if (password.substring(3).equals("password123")) {
+            // USE THIS AS WHATEVER YOU NEED FOR VERIFICATION
+            // ie you could go to a different 'verified' page here
             msg = "Password correct!";
         } else {
             msg = "incorrect password";
