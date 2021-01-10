@@ -8,7 +8,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
@@ -134,7 +134,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
@@ -154,7 +154,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="59dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
