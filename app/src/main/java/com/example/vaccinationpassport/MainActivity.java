@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener onCreatePassport = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            System.out.println("here");
+            Intent newIntent = new Intent(getApplicationContext(), PassportActivity.class);
+            startActivity(newIntent);
         }
     };
 
