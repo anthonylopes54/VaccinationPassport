@@ -256,7 +256,7 @@
         tools:src="@drawable/avatar" />
 
     <Button
-        android:id="@+id/nfc_button"
+        android:id="@+id/verifyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="47dp"
